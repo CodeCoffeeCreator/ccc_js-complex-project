@@ -1,0 +1,36 @@
+{
+  "name": "javascript-complex-project",
+  "version": "1.0.0",
+  "description": "Complex projext on Vanilla JavaScript",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeCoffeeCreator/ccc_js-complex-project.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "project",
+    "application",
+    "app",
+    "html",
+    "css",
+    "patterns",
+    "OOP"
+  ],
+  "author": "Denny Pearce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeCoffeeCreator/ccc_js-complex-project/issues"
+  },
+  "homepage": "https://github.com/CodeCoffeeCreator/ccc_js-complex-project#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
