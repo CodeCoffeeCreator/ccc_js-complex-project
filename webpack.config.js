@@ -32,4 +32,28 @@ module.exports = {
       filename: 'bundle.[hash].css',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          { loader: MiniCssExtractPlugin.loader, options: {} },
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
