@@ -22,7 +22,12 @@ export class DomListener {
     });
   }
 
-  removeDOMListeners() {}
+  removeDOMListeners() {
+    this.listeners.forEach((listener) => {
+      const method = getMethodName(listener);
+      this.$root.off(listener, this[method]);
+    });
+  }
 }
 
 function getMethodName(eventName) {
