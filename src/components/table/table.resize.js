@@ -7,11 +7,12 @@ export function resizeHandler($root, event) {
   const coords = $parent.getCoords();
   const type = $resizer.data.resize;
   const sideProp = type === 'col' ? 'bottom' : 'right';
+  const lineProp = type === 'col' ? '-1100px' : '-3000px';
   let value;
 
   $resizer.css({
     opacity: 1,
-    [sideProp]: '-3000px',
+    [sideProp]: lineProp,
   });
 
   document.onmousemove = (e) => {
