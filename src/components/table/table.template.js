@@ -6,6 +6,14 @@ const CODES = {
 const DEFAULT_WIDTH = 120;
 const DEFAULT_HEIGHT = 24;
 
+function getWidth(state, index) {
+  return (state[index] || DEFAULT_WIDTH) + 'px';
+}
+
+function getHeight(state, index) {
+  return (state[index] || DEFAULT_HEIGHT) + 'px';
+}
+
 function toCell(state, row) {
   return function (_, col) {
     const id = `${row}:${col}`;
@@ -64,14 +72,6 @@ function createRow(index, content, state) {
 
 function toChar(_, index) {
   return String.fromCharCode(CODES.A + index);
-}
-
-function getWidth(state, index) {
-  return (state[index] || DEFAULT_WIDTH) + 'px';
-}
-
-function getHeight(state, index) {
-  return (state[index] || DEFAULT_HEIGHT) + 'px';
 }
 
 function withWidthFrom(state) {
