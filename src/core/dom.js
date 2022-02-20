@@ -75,8 +75,8 @@ class Dom {
   }
 
   getStyles(styles = []) {
-    return styles.reduce((res, s) => {
-      res[s] = this.$el.style[s];
+    return styles.reduce((res, style) => {
+      res[style] = this.$el.style[style];
       return res;
     }, {});
   }
