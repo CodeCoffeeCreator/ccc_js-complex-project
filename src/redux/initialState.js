@@ -1,3 +1,4 @@
+import { defaultStyles } from '../constants';
 import { storage } from '../core/utils';
 
 const defaultState = {
@@ -5,6 +6,7 @@ const defaultState = {
   colState: {},
   dataState: {},
   currentText: '',
+  currentStyles: defaultStyles,
 };
 
 export const initialState = storage('excel-state')
