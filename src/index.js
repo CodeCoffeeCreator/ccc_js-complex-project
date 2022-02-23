@@ -8,19 +8,22 @@ import { createStore } from './core/createStore';
 import { rootReducer } from './redux/rootReducer';
 import { storage, debounce } from './core/utils';
 import { initialState } from './redux/initialState';
+import { Router } from './core/routes/Router';
 
-const store = createStore(rootReducer, initialState);
+new Router('#app', {});
 
-const stateListener = debounce((state) => {
-  console.log('App state: ', state);
-  storage('excel-state', state);
-}, 300);
+// const store = createStore(rootReducer, initialState);
 
-store.subscribe(stateListener);
+// const stateListener = debounce((state) => {
+//   console.log('App state: ', state);
+//   storage('excel-state', state);
+// }, 300);
 
-const excel = new Excel('#app', {
-  components: [Header, Toolbar, Formula, Table],
-  store,
-});
+// store.subscribe(stateListener);
 
-excel.render();
+// const excel = new Excel('#app', {
+//   components: [Header, Toolbar, Formula, Table],
+//   store,
+// });
+
+// excel.render();
