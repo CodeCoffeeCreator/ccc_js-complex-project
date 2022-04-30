@@ -44,3 +44,7 @@ export function createRecordsTable() {
 	</ul>
   `;
 }
+
+export function preventDefault(event) {
+  event.preventDefault();
+}
