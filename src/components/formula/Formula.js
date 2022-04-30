@@ -8,16 +8,16 @@ export class Formula extends ExcelComponent {
     super($root, {
       name: 'Formula',
       listeners: ['input', 'keydown'],
-      subscribe: ['currentText', 'colState'],
+      subscribe: ['currentText'],
       ...options,
     });
   }
 
   toHTML() {
     return `
-		<div class="info">fx</div>
-        <div id="formula" class="input" contenteditable spellcheck></div>
-	`;
+		  <div class="info">fx</div>
+      <div id="formula" class="input" contenteditable spellcheck></div>
+	  `;
   }
 
   init() {
@@ -28,14 +28,6 @@ export class Formula extends ExcelComponent {
     this.$on('table:select', ($cell) => {
       this.$formula.text($cell.data.value);
     });
-
-    // this.$on('table:input', ($cell) => {
-    //   this.$formula.text($cell.text());
-    // });
-
-    // this.$subscribe((state) => {
-    //   this.$formula.text(state.currentText);
-    // });
   }
 
   storeChanged(changes) {
