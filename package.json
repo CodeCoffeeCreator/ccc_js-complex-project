@@ -4,7 +4,7 @@
   "description": "Complex projext on Vanilla JavaScript",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "test:watch": "jest --watch",
     "start": "cross-env NODE_ENV=development webpack serve --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -43,7 +43,7 @@
     "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "html-webpack-plugin": "^5.5.0",
-    "jest": "^28.0.3",
+    "jest": "^25.2.0",
     "mini-css-extract-plugin": "2.4.5",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.4.0",
