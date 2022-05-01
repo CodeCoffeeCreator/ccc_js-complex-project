@@ -1,7 +1,7 @@
 import { $ } from '../../core/dom';
 import { Emitter } from '../../core/Emitter';
 import { StoreSubscriber } from '../../core/storeSubscriber';
-import { preventDefault } from '../../pages/dashboard.functions';
+import { preventDefault } from '../../shared/dashboard.functions';
 import { updateDate } from '../../redux/actions';
 
 export class Excel {
